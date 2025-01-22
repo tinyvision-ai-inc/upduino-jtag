@@ -1,0 +1,24 @@
+Drill report for pogo_adapter.kicad_pcb
+Created on 2025-01-22T12:10:57+0530
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'pogo_adapter.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (32 holes)
+    T2  0.650mm  0.0256"  (8 holes)
+    T3  2.200mm  0.0866"  (4 holes)
+
+    Total plated holes count 44
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0

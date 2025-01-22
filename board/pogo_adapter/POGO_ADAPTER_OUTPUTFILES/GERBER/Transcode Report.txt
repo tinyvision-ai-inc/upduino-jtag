@@ -1,0 +1,71 @@
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-F_Silkscreen.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D100
+D11   --> D101
+D12   --> D102
+D13   --> D103
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-F_Paste.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D104
+D11   --> D105
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-F_Mask.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D106
+D11   --> D107
+D12   --> D108
+D13   --> D109
+D14   --> D110
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-F_Cu.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D111
+D11   --> D112
+D12   --> D113
+D13   --> D114
+D14   --> D115
+D15   --> D116
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-Edge_Cuts.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D117
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-drl_map.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D118
+D11   --> D119
+D12   --> D120
+D13   --> D121
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-B_Mask.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D122
+D11   --> D123
+D12   --> D124
+D13   --> D125
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'E:\Works\BibinCJoseph\UPDUINO_JTAG\upduino-jtag\upduino-jtag\board\pogo_adapter\GERBER\pogo_adapter-B_Cu.gbr' ----   Wed Jan 22 12:11:26 2025
+
+D10   --> D126
+D11   --> D127
+D12   --> D128
+D13   --> D129
+D14   --> D130
+-----------------------------------------------------------------
