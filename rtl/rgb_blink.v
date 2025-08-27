@@ -54,7 +54,7 @@ module rgb_blink (
 
   assign spi_mosi = gpio_46; // TDO
 
-  assign gpio_4   = gpio_46; // Debug
+  assign gpio_4   = 1'b1; // RSTn/JTAG_SEL
 
 
 /*
