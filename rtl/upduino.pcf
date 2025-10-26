@@ -29,9 +29,10 @@ set_io -nowarn gpio_37 37
 set_io -nowarn gpio_34 34
 set_io -nowarn gpio_43 43
 set_io -nowarn gpio_36 36
-#set_io -nowarn gpio_42 42
+#set_io -nowarn -pullup_resistor 10K gpio_42 42 # Pullup will get pulled down by the jumper
 set_io -nowarn gpio_38 38
 set_io -nowarn gpio_28 28
+
 
 # Normal GPIO pins, right side
 

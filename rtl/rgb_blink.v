@@ -12,7 +12,8 @@ module rgb_blink (
 
   // TDI
   output wire gpio_47,
-  input wire spi_miso,
+  
+  inout wire spi_miso,
 
   // TDO
   input wire gpio_46,
@@ -24,8 +25,11 @@ module rgb_blink (
   output wire gpio_45,
 
   // UART
-  input wire gpio_48, // Receive
-  output wire gpio_3, // Transmit
+  //input wire gpio_48, // Receive
+  //output wire gpio_3, // Transmit
+
+  output wire gpio_48, // Receive
+  input wire gpio_3, // Transmit
 
   // UART selected when these pins are jumpered externally and overrides JTAG
   output wire gpio_38,
@@ -46,6 +50,7 @@ module rgb_blink (
 
 
 // JTAG only:
+/*  
   assign gpio_2   = spi_sck; // TCK
 
   assign gpio_45  = gpio_23; // TMS
@@ -56,28 +61,34 @@ module rgb_blink (
 
   assign gpio_4   = 1'b1; // RSTn/JTAG_SEL
 
+*/
 
-/*
   // JTAG selection logic: set an external jumper between GPIO_38 and GPIO_42 to disable JTAG
   assign gpio_38 = 1'b0;
 
-  wire jtag_sel = 1'b1; //gpio_42;
+  wire jtag_sel = gpio_42;
+
+  assign gpio_4   = jtag_sel ? 1'b1 : 1'b0; // RSTn/JTAG_SEL
 
   // TCK
   assign gpio_2 = jtag_sel ? spi_sck : 1'b1 ;
 
-  // TDI
-  assign gpio_47 = jtag_sel ? spi_mosi : 1'b1;
-
   // TMS
   assign gpio_45 = jtag_sel ? gpio_23 : 1'b1;
 
-  assign spi_miso = gpio_46;
+  // TDI
+  assign gpio_47 = jtag_sel ? spi_miso : 1'b1;
+
+  // TDO
+  assign spi_mosi = gpio_46;
+
 
   // UART selected when JTAG isnt being used
-  assign gpio_3   = jtag_sel ? 1'b1 : spi_sck;
-  assign spi_mosi = jtag_sel ? 1'bz : gpio_48;
-*/
+  //assign gpio_3   = jtag_sel ? 1'b1 : spi_sck; // UART RX
+  //assign spi_mosi = jtag_sel ? gpio_46 : gpio_48; // TDO or UART TX
+
+  assign gpio_48  = jtag_sel ? 1'b1 : spi_sck; // UART TX
+  assign spi_miso = jtag_sel ? 1'bz : gpio_3;  // UART RX
   /*
   wire        int_osc            ;
   reg  [27:0] frequency_counter_i;
@@ -109,7 +120,7 @@ module rgb_blink (
     //.RGB0PWM (frequency_counter_i[25]&frequency_counter_i[24] ),
     //.RGB1PWM (frequency_counter_i[25]&~frequency_counter_i[24]),
     //.RGB2PWM (~frequency_counter_i[25]&frequency_counter_i[24]),
-    .RGB0PWM (1'b0), //~spi_sck),
+    .RGB0PWM (jtag_sel),
     .RGB1PWM (~spi_mosi),
     .RGB2PWM (~gpio_23),
     .CURREN  (1'b1                                            ),
