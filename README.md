@@ -32,6 +32,18 @@ Mapping to the FPGA pins:
 
 ![Signals mapped to the SWD connector](./img/swd_connector.png)
 
+## Selection between UART and JTAG
+
+There appears to be no way to select between when the FTDI wants to use its IO as JTAG vs. UART. Rather than being clever about it, we can simply use a manual jumper for this.
+
+![JTAG vs UART selection Jumper](./img/jtag_uart_select.drawio.png)
+
+`gpio_42` is setup as a `JTAG_SELECT` pin and a 10K pullups is added to this pin in the FPGA constraints file. `gpio_38` is set low in the FPGA.
+
+- UART mode: Add jumper between `gpio_38` and `gpio_42`. The green LED on the UPduino goes `OFF` indicate this.
+- JTAG MODE: Remove jumper between `gpio_38` and `gpio_42`. The green LED on the UPduino comes `ON` to indicate this.
+
+
 ## Pogo probe adapter
 
 While its nice to have a standard 10 pin JTAG connector, this takes up significant board space. By moving these pins to a series of pads, we can save space. Alterntively, these can be moved as castellations on the edge of the board to save even more space.
